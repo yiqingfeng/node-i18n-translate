@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "多语言自动翻译，用于国际化处理",
   "main": "index.js",
+  "bin": {
+    "translate": "./bin/translate.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
