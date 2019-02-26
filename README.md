@@ -10,6 +10,12 @@
 npx github:yiqingfeng/node-i18n-translate -V
 ```
 
+> **注意：**
+>
+> 使用 npx 形式时，文件路径
+>
+> 不要使用相对路径，英文此时的相对路径是相对 npx 所在位置的
+
 常规使用：
 
 ```

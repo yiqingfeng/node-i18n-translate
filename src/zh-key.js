@@ -12,6 +12,8 @@ const reg = '\\sa-zA-Z0-9\u4e00-\u9fa5\u3002\uff1f\uff01\uff0c\u3001\uff1b\uff1a
  * @return {[String]} 
  */
 function formatKey(key) {
+    if (!key) return '';
+    
     let result = key;
     result = result.replace(/(\{\{(.+)\}\})/g, '*');
     result = result.replace(new RegExp(`[^${reg}]`, 'g'), '*');
@@ -31,14 +33,14 @@ function encrypKey(key) {
 
 module.exports = word => {
     let key = '';
-    const w = formatKey(words);
+    const w = formatKey(word);
 
     if (w.length <= 15) {
         key = w;
     } else {
         const prefix = w.substr(0, 15);
-        const hash = encrypKey(words);
+        const hash = encrypKey(word);
         key = `${prefix}-${hash}`;
     }
-    return key;
+    return key || null;
 }

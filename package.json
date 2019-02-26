@@ -25,6 +25,7 @@
   "homepage": "https://github.com/yiqingfeng/node-i18n-translate#readme",
   "dependencies": {
     "commander": "^2.19.0",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "node-xlsx": "^0.14.1"
   }
 }

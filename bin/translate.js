@@ -20,12 +20,12 @@ program
 
 function getParams(path, cmd) {
 	const entryPath = npath.resolve(__dirname, '../', path);
-	const outputPath = cmd.replaceFile ? npath.resolve(__dirname, '../output.xlsx'): entryPath;
+	const outputPath = cmd.replaceFile ? entryPath : npath.resolve(__dirname, '../output.xlsx');
 	return {
 		entryPath,
 		zhIndex: cmd.zhIndex,
 		keyIndex: cmd.keyIndex || null,
 		outputPath,
-		autoTranslate: cmd.translateAuto,
+		autoTranslate: !!cmd.translateAuto,
 	}
 }
