@@ -9,7 +9,7 @@ program
     .option('-k, --key-index <index>', '中文key所属列', /^(\d)+$/i)
     .option('-z, --zh-index <index>', '简体中文所属列', /^(\d)+$/i, 1)
     .option('-r, --replace-file', '是否直接替换原文件')
-    .option('-t, --translate-auto', '是否自动替换中英文')
+    .option('-t, --translate-auto', '是否自动替换中英文，替换时默认繁体和英文紧跟中文列之后')
     .usage('<command> [options]')
     .command('translate <path>', '自动处理多语言中的key和翻译')
     .action(function(path, cmd) {

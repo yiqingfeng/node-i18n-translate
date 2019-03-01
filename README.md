@@ -7,7 +7,7 @@
 快速使用：
 
 ```
-npx github:yiqingfeng/node-i18n-translate -V
+npx github:yiqingfeng/node-i18n-translate D:\mine\node\node-i18n-translate\i18n.xlsx -k 0 -z 1
 ```
 
 > **注意：**
@@ -23,6 +23,7 @@ git clone https://github.com/yiqingfeng/node-i18n-translate.git
 cd node-i18n-translate
 npm install
 npm start
+node ./bin/translate.js ./i18n.xlsx -k 0 -z 1
 ```
 
 
