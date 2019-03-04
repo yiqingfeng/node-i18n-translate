@@ -87,22 +87,3 @@ class Translate {
 }
 
 module.exports = Translate;
-
-// const https = require('https');
-
-let url = 'https://translate.google.cn/translate_a/single?client=webapp&sl=zh-CN&tl=en&hl=zh-CN&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&otf=2&ssel=0&tsel=0&kc=2&tk=872070.777708&q=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95%E5%95%8A';
-
-const got = require('got');
-got.get(url)
-    .then(function(res) {
-        console.log(res.body);
-    }).catch(function(err) {
-        var e;
-        e = new Error();
-        if (err.statusCode !== undefined && err.statusCode !== 200) {
-            e.code = 'BAD_REQUEST';
-        } else {
-            e.code = 'BAD_NETWORK';
-        }
-        throw e;
-    });
